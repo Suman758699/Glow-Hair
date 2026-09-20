@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HairGlow | Hair Care Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🌿 HairGlow
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#products" class="shop-button">
+            Shop Now
+        </a>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <p class="eyebrow">
+                ✨ HAIR CARE COLLECTION
+            </p>
+
+            <h1>
+                Better care for
+                <span>beautiful hair.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover hair oils, shampoos, serums and
+                supplements selected for your daily hair-care routine.
+            </p>
+
+            <a href="#products" class="main-button">
+                Explore Products →
+            </a>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="big-circle">
+
+                <div class="bottle">
+                    🌿
+                    <strong>HAIR</strong>
+                    <small>CARE</small>
+                </div>
+
+            </div>
+
+            <div class="floating floating-one">
+                🌱 Natural Care
+            </div>
+
+            <div class="floating floating-two">
+                ✨ Daily Glow
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories">
+
+        <div class="section-title">
+
+            <p>EXPLORE</p>
+
+            <h2>Shop by category</h2>
+
+        </div>
+
+
+        <div class="category-buttons">
+
+            <button onclick="filterProducts('All')">
+                🌿 All
+            </button>
+
+            <button onclick="filterProducts('Oil')">
+                🫒 Hair Oil
+            </button>
+
+            <button onclick="filterProducts('Shampoo')">
+                🧴 Shampoo
+            </button>
+
+            <button onclick="filterProducts('Serum')">
+                💧 Serum
+            </button>
+
+            <button onclick="filterProducts('Supplement')">
+                💊 Supplements
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="products" id="products">
+
+        <div class="section-title">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>Popular Hair Products</h2>
+
+        </div>
+
+
+        <div class="product-tools">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search products..."
+                oninput="searchProducts()"
+            >
+
+
+            <select
+                id="sortSelect"
+                onchange="sortProducts()"
+            >
+
+                <option value="default">
+                    Sort Products
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div
+            id="productGrid"
+            class="product-grid"
+        ></div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div>
+
+            <p>ABOUT HAIRGLOW</p>
+
+            <h2>
+                Your simple destination
+                for hair care.
+            </h2>
+
+        </div>
+
+        <div>
+
+            <p>
+                HairGlow helps you discover useful hair-care
+                products in one simple place.
+            </p>
+
+            <p>
+                Product links may contain affiliate links.
+                We may earn a commission when you purchase
+                through our links.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <strong>
+            🌿 HairGlow
+        </strong>
+
+        <span>
+            © 2026 HairGlow
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

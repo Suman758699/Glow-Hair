@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HairGlow Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- LOGIN -->
+
+    <div
+        id="loginScreen"
+        class="login-screen"
+    >
+
+        <div class="login-box">
+
+            <div class="admin-icon">
+                🔐
+            </div>
+
+            <h1>
+                HairGlow Admin
+            </h1>
+
+            <p>
+                Private management panel
+            </p>
+
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Admin password"
+            >
+
+
+            <button onclick="login()">
+                Login
+            </button>
+
+
+            <small>
+                Admin access only
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ADMIN -->
+
+    <div
+        id="adminPanel"
+        class="admin-panel"
+    >
+
+
+        <header class="admin-header">
+
+            <div>
+
+                <h1>
+                    🌿 HairGlow Admin
+                </h1>
+
+                <p>
+                    Manage your products
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <a
+                    href="index.html"
+                    target="_blank"
+                >
+                    View Store
+                </a>
+
+
+                <button onclick="logout()">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <main>
+
+
+            <!-- ADD PRODUCT -->
+
+            <section class="admin-card">
+
+                <h2>
+                    Add / Edit Product
+                </h2>
+
+
+                <form id="productForm">
+
+
+                    <input
+                        type="hidden"
+                        id="editId"
+                    >
+
+
+                    <label>
+                        Product Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Example: Rosemary Hair Oil"
+                        required
+                    >
+
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select id="category">
+
+                        <option value="Oil">
+                            Hair Oil
+                        </option>
+
+                        <option value="Shampoo">
+                            Shampoo
+                        </option>
+
+                        <option value="Serum">
+                            Serum
+                        </option>
+
+                        <option value="Supplement">
+                            Supplement
+                        </option>
+
+                    </select>
+
+
+                    <label>
+                        Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="price"
+                        required
+                    >
+
+
+                    <label>
+                        Original Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="oldPrice"
+                        required
+                    >
+
+
+                    <label>
+                        Rating
+                    </label>
+
+                    <input
+                        type="number"
+                        id="rating"
+                        value="4.5"
+                        min="1"
+                        max="5"
+                        step="0.1"
+                    >
+
+
+                    <label>
+                        Product Icon
+                    </label>
+
+                    <input
+                        type="text"
+                        id="icon"
+                        placeholder="🌿"
+                        value="🌿"
+                    >
+
+
+                    <label>
+                        Affiliate Link
+                    </label>
+
+                    <input
+                        type="url"
+                        id="link"
+                        placeholder="https://amazon.in/..."
+                        required
+                    >
+
+
+                    <div class="buttons">
+
+                        <button
+                            type="submit"
+                            class="save"
+                        >
+                            Save Product
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="clear"
+                            onclick="clearForm()"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- PRODUCTS -->
+
+            <section class="admin-card">
+
+                <h2>
+                    Product Management
+                </h2>
+
+
+                <p class="product-count">
+                    Total products:
+                    <strong id="productCount">
+                        0
+                    </strong>
+                </p>
+
+
+                <div
+                    id="adminProducts"
+                    class="admin-products"
+                ></div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
