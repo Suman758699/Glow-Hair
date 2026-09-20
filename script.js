@@ -12,6 +12,17 @@ const defaultProducts = [
     },
 
     {
+        id: 1,
+        name: "Hair Color",
+        category: "Hair Color",
+        price: 399,
+        oldPrice: 499,
+        rating: 4.5,
+        icon: "🎨",
+        link: "#"
+    },
+
+    {
         id: 2,
         name: "Anti Hair Fall Shampoo",
         category: "Shampoo",
